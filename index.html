@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll-driven animated card stack with scroll snap events.</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main data-active-index="0" data-debug="false">
+  <div class="card-stack">
+    <div class="card"><img src="1.jpg" /></div>
+    <div class="card"><img src="2.jpg" /></div>
+    <div class="card"><img src="3.jpg" /></div>
+    <div class="card"><img src="4.jpg" /></div>
+    <div class="card"><img src="5.jpg" /></div>
+    
+  </div>
+  <div class="scroller">
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+    <div class="scroll-item"></div>
+  </div>
+</main>
+
+
+<!-- Warn pointer down -->
+<script>
+ const warn = () => {
+   document.querySelector('.warning').classList.toggle('show');
+   setTimeout(() => document.querySelector('.warning').classList.toggle('show'), 3000);
+ };
+  document.querySelector('main').addEventListener('mousedown', warn);
+</script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
