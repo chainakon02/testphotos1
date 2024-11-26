@@ -78,6 +78,7 @@ main {
   scroll-snap-type: x mandatory;
   scroll-timeline: --scroll-timeline;
   scroll-timeline-axis: x;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scroll-item {
